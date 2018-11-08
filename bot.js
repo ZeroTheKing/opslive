@@ -36,6 +36,16 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 }
 });
 
+const Discord = require('discord.js'),
+    bot = new Discord.Client({sisableEveryone: true})
+    console.log("muuuuuuuuute,");
+bot.on('guildMemberAdd', member => {
+const mohamed= member.guild.channels.get("508986501854396416");
+if(!mohamed) return;
+if(mohamed) {
+setTimeout(() => mohamed.send(`***Welçømë Ťø __OBX Kingdom__ 🕊 🌸***`), 4000)        
+}
+});
 
 
 
