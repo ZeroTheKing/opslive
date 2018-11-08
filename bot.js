@@ -36,12 +36,16 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
 }
 });
 
-const mohamed= member.guild.channels.get("508986501854396416");
-if(!mohamed) return;
-if(mohamed) {
-setTimeout(() => mohamed.send(`***Welçømë Ťø __OBX Kingdom__ 🕊 🌸***`), 4000)        
-}
-});
+client.on('guildMemberAdd', Sal => { //By Salto7#4595
+    var embed = new Discord.RichEmbed()
+    .setTitle('Welcome')
+    .setDescription('***Welçømë Ťø __OBX Kingdom__ 🕊 🌸***')
+    .setColor('RANDOM')
+    .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
+    var channel =Sal.guild.channels.find('508986501854396416') // هنا حط اسم الروم الي تبيه يكتب فيه
+    if (!channel) return;
+    channel.send({embed : embed});
+    });
 
 
 
