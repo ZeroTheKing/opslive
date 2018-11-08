@@ -42,7 +42,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     .setDescription('***Welçømë Ťø __OBX Kingdom__ 🕊 🌸***')
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('tèxt') // هنا حط اسم الروم الي تبيه يكتب فيه
+    var channel =Sal.guild.channels.find('name', 'tèxt') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
     });
